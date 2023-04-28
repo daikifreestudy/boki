@@ -1,0 +1,1200 @@
+  [1m[35m (15.1ms)[0m  [1m[35mCREATE DATABASE `7x54w_boki` DEFAULT CHARACTER SET `utf8`[0m
+Started GET "/" for ::1 at 2023-04-29 00:18:08 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.1ms | Allocations: 673)
+Completed 200 OK in 9ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 6563)
+
+
+Started GET "/admin" for ::1 at 2023-04-29 00:21:36 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/admin"):
+  
+Started GET "/admin" for ::1 at 2023-04-29 00:21:52 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/admin"):
+  
+Started GET "/admin" for ::1 at 2023-04-29 00:21:54 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/admin"):
+  
+Started GET "/rails/info/routes?path=admin" for ::1 at 2023-04-29 00:21:57 +0900
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"admin"}
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 3929)
+
+
+Started GET "/rails/info/routes?path=admin" for ::1 at 2023-04-29 00:21:58 +0900
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"admin"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 640)
+
+
+  [1m[35m (14.4ms)[0m  [1m[34mSELECT @@innodb_file_per_table = 1 AND @@innodb_file_format = 'Barracuda'[0m
+  [1m[35m (44.0ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (25.9ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (15.1ms)[0m  [1m[34mSELECT GET_LOCK('4391602673558112180', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (14.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateCategories (20230428152939)
+  [1m[35m (38.7ms)[0m  [1m[35mCREATE TABLE `categories` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `order` int, `name` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (13.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (13.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230428152939')[0m
+  [1m[36mTRANSACTION (15.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateQuestions (20230428153355)
+  [1m[35m (48.2ms)[0m  [1m[35mCREATE TABLE `questions` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `category_id` int, `question` text, `answer1` tinyint(1), `answer2` tinyint(1), `answer3` tinyint(1), `title` varchar(255), `order` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (13.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (12.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230428153355')[0m
+  [1m[36mTRANSACTION (15.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (14.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (13.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (13.6ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2023-04-28 15:34:10.629434', '2023-04-28 15:34:10.629434')[0m
+  [1m[36mTRANSACTION (15.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (13.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('4391602673558112180')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (15.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/admin" for ::1 at 2023-04-29 00:34:33 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (13.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Admin::CategoriesController#index as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2596)
+
+
+  
+NameError (uninitialized constant CategoryDashboard):
+  
+activesupport (7.0.4) lib/active_support/inflector/methods.rb:280:in `constantize'
+administrate (0.18.0) lib/administrate/resource_resolver.rb:8:in `dashboard_class'
+administrate (0.18.0) app/controllers/administrate/application_controller.rb:222:in `dashboard_class'
+administrate (0.18.0) app/controllers/administrate/application_controller.rb:179:in `dashboard'
+administrate (0.18.0) app/controllers/administrate/application_controller.rb:85:in `filter_resources'
+administrate (0.18.0) app/controllers/administrate/application_controller.rb:8:in `index'
+actionpack (7.0.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.4) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.4) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.4) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.4) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.4) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.4) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.4) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.7) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.7) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/cookies.rb:696:in `call'
+activerecord (7.0.4) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/method_override.rb:24:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/admin/categories" for ::1 at 2023-04-29 00:34:42 +0900
+Processing by Admin::CategoriesController#index as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2143)
+
+
+  
+NameError (uninitialized constant CategoryDashboard):
+  
+activesupport (7.0.4) lib/active_support/inflector/methods.rb:280:in `constantize'
+administrate (0.18.0) lib/administrate/resource_resolver.rb:8:in `dashboard_class'
+administrate (0.18.0) app/controllers/administrate/application_controller.rb:222:in `dashboard_class'
+administrate (0.18.0) app/controllers/administrate/application_controller.rb:179:in `dashboard'
+administrate (0.18.0) app/controllers/administrate/application_controller.rb:85:in `filter_resources'
+administrate (0.18.0) app/controllers/administrate/application_controller.rb:8:in `index'
+actionpack (7.0.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.4) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.4) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.4) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.4) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.4) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.4) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.4) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.7) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.7) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/cookies.rb:696:in `call'
+activerecord (7.0.4) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/method_override.rb:24:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/admin/categories" for ::1 at 2023-04-29 00:35:30 +0900
+Processing by Admin::CategoriesController#index as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2142)
+
+
+  
+NameError (uninitialized constant CategoryDashboard):
+  
+activesupport (7.0.4) lib/active_support/inflector/methods.rb:280:in `constantize'
+administrate (0.18.0) lib/administrate/resource_resolver.rb:8:in `dashboard_class'
+administrate (0.18.0) app/controllers/administrate/application_controller.rb:222:in `dashboard_class'
+administrate (0.18.0) app/controllers/administrate/application_controller.rb:179:in `dashboard'
+administrate (0.18.0) app/controllers/administrate/application_controller.rb:85:in `filter_resources'
+administrate (0.18.0) app/controllers/administrate/application_controller.rb:8:in `index'
+actionpack (7.0.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.4) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.4) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.4) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.4) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.4) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.4) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.4) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.7) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.7) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/cookies.rb:696:in `call'
+activerecord (7.0.4) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/method_override.rb:24:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/admin/categories" for ::1 at 2023-04-29 00:38:17 +0900
+Processing by Admin::CategoriesController#index as HTML
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 2144)
+
+
+  
+NameError (uninitialized constant CategoryDashboard):
+  
+activesupport (7.0.4) lib/active_support/inflector/methods.rb:280:in `constantize'
+administrate (0.18.0) lib/administrate/resource_resolver.rb:8:in `dashboard_class'
+administrate (0.18.0) app/controllers/administrate/application_controller.rb:222:in `dashboard_class'
+administrate (0.18.0) app/controllers/administrate/application_controller.rb:179:in `dashboard'
+administrate (0.18.0) app/controllers/administrate/application_controller.rb:85:in `filter_resources'
+administrate (0.18.0) app/controllers/administrate/application_controller.rb:8:in `index'
+actionpack (7.0.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.4) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.4) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.4) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.4) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.4) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.4) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.4) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.7) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.7) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/cookies.rb:696:in `call'
+activerecord (7.0.4) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/method_override.rb:24:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/admin/category" for ::1 at 2023-04-29 00:38:21 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/admin/category"):
+  
+Started GET "/admin/questions" for ::1 at 2023-04-29 00:38:27 +0900
+Processing by Admin::QuestionsController#index as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2313)
+
+
+  
+NameError (uninitialized constant QuestionDashboard):
+  
+activesupport (7.0.4) lib/active_support/inflector/methods.rb:280:in `constantize'
+administrate (0.18.0) lib/administrate/resource_resolver.rb:8:in `dashboard_class'
+administrate (0.18.0) app/controllers/administrate/application_controller.rb:222:in `dashboard_class'
+administrate (0.18.0) app/controllers/administrate/application_controller.rb:179:in `dashboard'
+administrate (0.18.0) app/controllers/administrate/application_controller.rb:85:in `filter_resources'
+administrate (0.18.0) app/controllers/administrate/application_controller.rb:8:in `index'
+actionpack (7.0.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.4) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.4) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.4) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.4) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.4) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.4) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.4) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.7) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.7) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/cookies.rb:696:in `call'
+activerecord (7.0.4) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/method_override.rb:24:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/admin/questions" for ::1 at 2023-04-29 00:39:03 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (13.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Admin::QuestionsController#index as HTML
+  Rendering layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb
+  Rendering /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_search.html.erb (Duration: 0.9ms | Allocations: 1092)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_index_header.html.erb (Duration: 103.8ms | Allocations: 31488)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_collection_header_actions.html.erb (Duration: 0.4ms | Allocations: 169)
+  [1m[36mQuestion Load (13.4ms)[0m  [1m[34mSELECT `questions`.* FROM `questions` LIMIT 20 OFFSET 0[0m
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_collection.html.erb (Duration: 16.9ms | Allocations: 4723)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_pagination.html.erb (Duration: 1.2ms | Allocations: 975)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (Duration: 124.5ms | Allocations: 38827)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 263.9ms | Allocations: 137197)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_icons.html.erb (Duration: 0.3ms | Allocations: 135)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_navigation.html.erb (Duration: 2.2ms | Allocations: 1771)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.3ms | Allocations: 272)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_javascript.html.erb (Duration: 1.2ms | Allocations: 2162)
+  Rendered layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb (Duration: 396.2ms | Allocations: 182800)
+Completed 200 OK in 430ms (Views: 359.9ms | ActiveRecord: 55.7ms | Allocations: 195902)
+
+
+Started GET "/admin/categories" for ::1 at 2023-04-29 00:39:05 +0900
+Processing by Admin::CategoriesController#index as HTML
+  Rendering layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb
+  Rendering /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_search.html.erb (Duration: 0.7ms | Allocations: 325)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_index_header.html.erb (Duration: 24.5ms | Allocations: 14349)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_collection_header_actions.html.erb (Duration: 0.1ms | Allocations: 33)
+  [1m[36mCategory Load (14.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` LIMIT 20 OFFSET 0[0m
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_collection.html.erb (Duration: 18.1ms | Allocations: 3013)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_pagination.html.erb (Duration: 0.7ms | Allocations: 275)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (Duration: 45.2ms | Allocations: 18223)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 4.8ms | Allocations: 1795)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_navigation.html.erb (Duration: 2.4ms | Allocations: 1110)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_javascript.html.erb (Duration: 3.4ms | Allocations: 1840)
+  Rendered layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb (Duration: 59.4ms | Allocations: 24236)
+Completed 200 OK in 106ms (Views: 34.5ms | ActiveRecord: 42.2ms | Allocations: 26629)
+
+
+Started GET "/admin/categories/new" for ::1 at 2023-04-29 00:39:07 +0900
+Processing by Admin::CategoriesController#new as HTML
+  Rendering layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb
+  Rendering /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/string/_form.html.erb (Duration: 6.9ms | Allocations: 1273)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/number/_form.html.erb (Duration: 2.6ms | Allocations: 614)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_form.html.erb (Duration: 15.0ms | Allocations: 3301)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (Duration: 19.9ms | Allocations: 4200)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 4.6ms | Allocations: 1803)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_navigation.html.erb (Duration: 3.1ms | Allocations: 1587)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_javascript.html.erb (Duration: 3.4ms | Allocations: 1840)
+  Rendered layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb (Duration: 33.0ms | Allocations: 10074)
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.0ms | Allocations: 10731)
+
+
+Started GET "/admin/questions" for ::1 at 2023-04-29 00:39:12 +0900
+Processing by Admin::QuestionsController#index as HTML
+  Rendering layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb
+  Rendering /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_search.html.erb (Duration: 1.4ms | Allocations: 324)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_index_header.html.erb (Duration: 5.3ms | Allocations: 1405)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_collection_header_actions.html.erb (Duration: 0.1ms | Allocations: 31)
+  [1m[36mQuestion Load (13.5ms)[0m  [1m[34mSELECT `questions`.* FROM `questions` LIMIT 20 OFFSET 0[0m
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_collection.html.erb (Duration: 37.5ms | Allocations: 2804)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_pagination.html.erb (Duration: 0.2ms | Allocations: 96)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (Duration: 43.9ms | Allocations: 4605)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 2.8ms | Allocations: 1795)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_navigation.html.erb (Duration: 1.4ms | Allocations: 1106)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_javascript.html.erb (Duration: 2.1ms | Allocations: 1840)
+  Rendered layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb (Duration: 51.6ms | Allocations: 10143)
+Completed 200 OK in 56ms (Views: 38.9ms | ActiveRecord: 13.5ms | Allocations: 10748)
+
+
+Started GET "/admin/categories" for ::1 at 2023-04-29 00:39:13 +0900
+Processing by Admin::CategoriesController#index as HTML
+  Rendering layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb
+  Rendering /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_search.html.erb (Duration: 0.8ms | Allocations: 316)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_index_header.html.erb (Duration: 3.1ms | Allocations: 1387)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_collection_header_actions.html.erb (Duration: 0.1ms | Allocations: 33)
+  [1m[36mCategory Load (14.8ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` LIMIT 20 OFFSET 0[0m
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_collection.html.erb (Duration: 39.1ms | Allocations: 2821)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_pagination.html.erb (Duration: 0.4ms | Allocations: 96)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (Duration: 43.3ms | Allocations: 4605)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 2.9ms | Allocations: 1793)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_navigation.html.erb (Duration: 1.4ms | Allocations: 1107)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_javascript.html.erb (Duration: 2.5ms | Allocations: 1840)
+  Rendered layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb (Duration: 51.4ms | Allocations: 10137)
+Completed 200 OK in 54ms (Views: 37.3ms | ActiveRecord: 14.8ms | Allocations: 10739)
+
+
+Started GET "/admin/questions" for ::1 at 2023-04-29 00:39:14 +0900
+Processing by Admin::QuestionsController#index as HTML
+  Rendering layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb
+  Rendering /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_search.html.erb (Duration: 0.5ms | Allocations: 314)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_index_header.html.erb (Duration: 1.9ms | Allocations: 1385)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_collection_header_actions.html.erb (Duration: 0.1ms | Allocations: 31)
+  [1m[36mQuestion Load (14.5ms)[0m  [1m[34mSELECT `questions`.* FROM `questions` LIMIT 20 OFFSET 0[0m
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_collection.html.erb (Duration: 39.7ms | Allocations: 2801)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_pagination.html.erb (Duration: 0.2ms | Allocations: 95)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (Duration: 42.3ms | Allocations: 4581)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 2.6ms | Allocations: 1794)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_navigation.html.erb (Duration: 1.2ms | Allocations: 1103)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_javascript.html.erb (Duration: 2.0ms | Allocations: 1840)
+  Rendered layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb (Duration: 49.1ms | Allocations: 10109)
+Completed 200 OK in 69ms (Views: 53.7ms | ActiveRecord: 14.5ms | Allocations: 10708)
+
+
+Started GET "/admin/categories" for ::1 at 2023-04-29 00:39:15 +0900
+Processing by Admin::CategoriesController#index as HTML
+  Rendering layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb
+  Rendering /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_search.html.erb (Duration: 0.7ms | Allocations: 314)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_index_header.html.erb (Duration: 2.6ms | Allocations: 1381)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_collection_header_actions.html.erb (Duration: 0.1ms | Allocations: 33)
+  [1m[36mCategory Load (14.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` LIMIT 20 OFFSET 0[0m
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_collection.html.erb (Duration: 32.5ms | Allocations: 2818)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_pagination.html.erb (Duration: 0.3ms | Allocations: 95)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (Duration: 36.1ms | Allocations: 4595)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 3.2ms | Allocations: 1793)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_navigation.html.erb (Duration: 1.4ms | Allocations: 1108)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_javascript.html.erb (Duration: 1.9ms | Allocations: 1840)
+  Rendered layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb (Duration: 43.8ms | Allocations: 10126)
+Completed 200 OK in 46ms (Views: 30.1ms | ActiveRecord: 14.3ms | Allocations: 10723)
+
+
+Started GET "/admin/questions" for ::1 at 2023-04-29 00:39:16 +0900
+Processing by Admin::QuestionsController#index as HTML
+  Rendering layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb
+  Rendering /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_search.html.erb (Duration: 0.8ms | Allocations: 313)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_index_header.html.erb (Duration: 3.2ms | Allocations: 1381)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_collection_header_actions.html.erb (Duration: 0.1ms | Allocations: 31)
+  [1m[36mQuestion Load (14.6ms)[0m  [1m[34mSELECT `questions`.* FROM `questions` LIMIT 20 OFFSET 0[0m
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_collection.html.erb (Duration: 33.2ms | Allocations: 2801)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_pagination.html.erb (Duration: 0.3ms | Allocations: 95)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (Duration: 37.3ms | Allocations: 4577)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 3.1ms | Allocations: 1794)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_icons.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_navigation.html.erb (Duration: 1.6ms | Allocations: 1103)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_javascript.html.erb (Duration: 2.0ms | Allocations: 1840)
+  Rendered layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb (Duration: 45.4ms | Allocations: 10104)
+Completed 200 OK in 47ms (Views: 31.4ms | ActiveRecord: 14.6ms | Allocations: 10695)
+
+
+Started GET "/admin/questions/new" for ::1 at 2023-04-29 00:39:18 +0900
+Processing by Admin::QuestionsController#new as HTML
+  Rendering layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb
+  Rendering /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/boolean/_form.html.erb (Duration: 5.2ms | Allocations: 999)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/boolean/_form.html.erb (Duration: 0.5ms | Allocations: 294)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/boolean/_form.html.erb (Duration: 0.4ms | Allocations: 294)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/number/_form.html.erb (Duration: 0.4ms | Allocations: 275)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/number/_form.html.erb (Duration: 0.3ms | Allocations: 267)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/text/_form.html.erb (Duration: 2.7ms | Allocations: 635)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/string/_form.html.erb (Duration: 0.3ms | Allocations: 264)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_form.html.erb (Duration: 13.2ms | Allocations: 4366)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (Duration: 15.0ms | Allocations: 4796)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 2.7ms | Allocations: 1801)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_navigation.html.erb (Duration: 1.5ms | Allocations: 1579)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_javascript.html.erb (Duration: 2.4ms | Allocations: 1840)
+  Rendered layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb (Duration: 22.5ms | Allocations: 10659)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.0ms | Allocations: 11141)
+
+
+Started GET "/admin/categories" for ::1 at 2023-04-29 00:39:51 +0900
+Processing by Admin::CategoriesController#index as HTML
+  Rendering layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb
+  Rendering /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_search.html.erb (Duration: 0.5ms | Allocations: 323)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_index_header.html.erb (Duration: 2.0ms | Allocations: 1401)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_collection_header_actions.html.erb (Duration: 0.1ms | Allocations: 33)
+  [1m[36mCategory Load (14.6ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` LIMIT 20 OFFSET 0[0m
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_collection.html.erb (Duration: 32.2ms | Allocations: 2821)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_pagination.html.erb (Duration: 0.2ms | Allocations: 95)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (Duration: 34.9ms | Allocations: 4618)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 2.9ms | Allocations: 1793)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_navigation.html.erb (Duration: 1.1ms | Allocations: 1110)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_javascript.html.erb (Duration: 2.2ms | Allocations: 1840)
+  Rendered layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb (Duration: 42.3ms | Allocations: 10151)
+Completed 200 OK in 44ms (Views: 28.2ms | ActiveRecord: 14.6ms | Allocations: 10748)
+
+
+Started GET "/admin/questions" for ::1 at 2023-04-29 00:41:44 +0900
+Processing by Admin::QuestionsController#index as HTML
+  Rendering layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb
+  Rendering /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_search.html.erb (Duration: 1.2ms | Allocations: 315)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_index_header.html.erb (Duration: 3.7ms | Allocations: 1387)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_collection_header_actions.html.erb (Duration: 0.1ms | Allocations: 31)
+  [1m[36mQuestion Load (15.0ms)[0m  [1m[34mSELECT `questions`.* FROM `questions` LIMIT 20 OFFSET 0[0m
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_collection.html.erb (Duration: 37.5ms | Allocations: 2799)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_pagination.html.erb (Duration: 0.3ms | Allocations: 95)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (Duration: 42.1ms | Allocations: 4581)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 5.5ms | Allocations: 1793)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_navigation.html.erb (Duration: 1.1ms | Allocations: 1103)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_javascript.html.erb (Duration: 2.4ms | Allocations: 1840)
+  Rendered layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb (Duration: 52.6ms | Allocations: 10107)
+Completed 200 OK in 57ms (Views: 38.8ms | ActiveRecord: 15.0ms | Allocations: 10698)
+
+
+Started GET "/admin/categories" for ::1 at 2023-04-29 00:41:46 +0900
+Processing by Admin::CategoriesController#index as HTML
+  Rendering layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb
+  Rendering /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_search.html.erb (Duration: 0.9ms | Allocations: 314)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_index_header.html.erb (Duration: 3.3ms | Allocations: 1381)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_collection_header_actions.html.erb (Duration: 0.1ms | Allocations: 33)
+  [1m[36mCategory Load (17.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` LIMIT 20 OFFSET 0[0m
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_collection.html.erb (Duration: 43.5ms | Allocations: 2818)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_pagination.html.erb (Duration: 0.3ms | Allocations: 95)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (Duration: 47.9ms | Allocations: 4595)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 3.3ms | Allocations: 1793)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_navigation.html.erb (Duration: 1.4ms | Allocations: 1107)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_javascript.html.erb (Duration: 2.7ms | Allocations: 1840)
+  Rendered layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb (Duration: 56.7ms | Allocations: 10141)
+Completed 200 OK in 60ms (Views: 40.8ms | ActiveRecord: 17.0ms | Allocations: 10738)
+
+
+Started GET "/admin/categories/new" for ::1 at 2023-04-29 00:41:47 +0900
+Processing by Admin::CategoriesController#new as HTML
+  Rendering layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb
+  Rendering /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/string/_form.html.erb (Duration: 0.4ms | Allocations: 233)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/number/_form.html.erb (Duration: 0.3ms | Allocations: 243)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_form.html.erb (Duration: 2.5ms | Allocations: 1218)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (Duration: 9.2ms | Allocations: 1554)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 3.0ms | Allocations: 1802)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_navigation.html.erb (Duration: 1.5ms | Allocations: 1568)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_javascript.html.erb (Duration: 2.1ms | Allocations: 1874)
+  Rendered layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb (Duration: 16.8ms | Allocations: 7439)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.0ms | Allocations: 7824)
+
+
+Started POST "/admin/categories" for ::1 at 2023-04-29 00:42:07 +0900
+Processing by Admin::CategoriesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"一般原則", "order"=>"1"}, "commit"=>"Create Category"}
+  [1m[36mTRANSACTION (12.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (13.3ms)[0m  [1m[32mINSERT INTO `categories` (`order`, `name`, `created_at`, `updated_at`) VALUES (1, '一般原則', '2023-04-28 15:42:07.154601', '2023-04-28 15:42:07.154601')[0m
+  [1m[36mTRANSACTION (14.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/categories/1
+Completed 302 Found in 60ms (ActiveRecord: 40.3ms | Allocations: 3792)
+
+
+Started GET "/admin/categories/1" for ::1 at 2023-04-29 00:42:07 +0900
+Processing by Admin::CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (13.1ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  Rendering layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb
+  Rendering /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/show.html.erb within layouts/administrate/application
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/number/_show.html.erb (Duration: 0.6ms | Allocations: 182)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/string/_show.html.erb (Duration: 0.3ms | Allocations: 169)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/number/_show.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/date_time/_show.html.erb (Duration: 0.5ms | Allocations: 288)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/date_time/_show.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/show.html.erb within layouts/administrate/application (Duration: 5.4ms | Allocations: 3401)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 2.0ms | Allocations: 1793)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_navigation.html.erb (Duration: 0.8ms | Allocations: 1134)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.0ms | Allocations: 29)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_javascript.html.erb (Duration: 1.7ms | Allocations: 1873)
+  Rendered layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb (Duration: 10.8ms | Allocations: 9027)
+Completed 200 OK in 42ms (Views: 12.2ms | ActiveRecord: 13.1ms | Allocations: 11507)
+
+
+Started GET "/admin/questions" for ::1 at 2023-04-29 00:42:08 +0900
+Processing by Admin::QuestionsController#index as HTML
+  Rendering layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb
+  Rendering /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_search.html.erb (Duration: 0.7ms | Allocations: 322)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_index_header.html.erb (Duration: 2.5ms | Allocations: 1401)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_collection_header_actions.html.erb (Duration: 0.1ms | Allocations: 31)
+  [1m[36mQuestion Load (14.5ms)[0m  [1m[34mSELECT `questions`.* FROM `questions` LIMIT 20 OFFSET 0[0m
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_collection.html.erb (Duration: 40.4ms | Allocations: 2799)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_pagination.html.erb (Duration: 0.3ms | Allocations: 95)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (Duration: 43.8ms | Allocations: 4595)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 3.6ms | Allocations: 1794)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_navigation.html.erb (Duration: 1.7ms | Allocations: 1106)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_javascript.html.erb (Duration: 2.3ms | Allocations: 1840)
+  Rendered layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb (Duration: 52.9ms | Allocations: 10127)
+Completed 200 OK in 55ms (Views: 39.1ms | ActiveRecord: 14.5ms | Allocations: 10718)
+
+
+Started GET "/admin/questions/new" for ::1 at 2023-04-29 00:42:15 +0900
+Processing by Admin::QuestionsController#new as HTML
+  Rendering layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb
+  Rendering /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/boolean/_form.html.erb (Duration: 0.5ms | Allocations: 283)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/boolean/_form.html.erb (Duration: 0.4ms | Allocations: 282)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/boolean/_form.html.erb (Duration: 0.4ms | Allocations: 282)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/number/_form.html.erb (Duration: 0.4ms | Allocations: 243)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/number/_form.html.erb (Duration: 0.8ms | Allocations: 243)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/text/_form.html.erb (Duration: 0.5ms | Allocations: 226)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/string/_form.html.erb (Duration: 0.4ms | Allocations: 232)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_form.html.erb (Duration: 6.6ms | Allocations: 2938)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (Duration: 7.5ms | Allocations: 3273)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 3.5ms | Allocations: 1801)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_navigation.html.erb (Duration: 1.7ms | Allocations: 1563)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_javascript.html.erb (Duration: 2.4ms | Allocations: 1840)
+  Rendered layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb (Duration: 16.2ms | Allocations: 9118)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.0ms | Allocations: 9505)
+
+
+  [1m[35m (13.4ms)[0m  [1m[34mSELECT GET_LOCK('4391602673558112180', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (14.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to Addanswertoquestions (20230428154328)
+  [1m[35m (13.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('4391602673558112180')[0m
+  [1m[35m (14.5ms)[0m  [1m[34mSELECT GET_LOCK('4391602673558112180', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (13.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to Addanswertoquestions (20230428154328)
+  [1m[35m (29.0ms)[0m  [1m[35mALTER TABLE `questions` ADD `answer` varchar(255)[0m
+  [1m[36mTRANSACTION (14.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (13.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230428154328')[0m
+  [1m[36mTRANSACTION (15.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (15.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (15.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('4391602673558112180')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (13.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/admin/questions/new" for ::1 at 2023-04-29 00:44:47 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (16.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Admin::QuestionsController#new as HTML
+  Rendering layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb
+  Rendering /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/boolean/_form.html.erb (Duration: 0.3ms | Allocations: 283)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/boolean/_form.html.erb (Duration: 0.1ms | Allocations: 282)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/boolean/_form.html.erb (Duration: 0.1ms | Allocations: 282)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/number/_form.html.erb (Duration: 0.1ms | Allocations: 244)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/number/_form.html.erb (Duration: 0.1ms | Allocations: 244)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/text/_form.html.erb (Duration: 0.1ms | Allocations: 227)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/string/_form.html.erb (Duration: 0.1ms | Allocations: 233)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_form.html.erb (Duration: 2.5ms | Allocations: 2965)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (Duration: 3.2ms | Allocations: 3304)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 2.3ms | Allocations: 1802)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_navigation.html.erb (Duration: 2.2ms | Allocations: 2381)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_javascript.html.erb (Duration: 1.5ms | Allocations: 1873)
+  Rendered layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb (Duration: 9.8ms | Allocations: 10003)
+Completed 200 OK in 71ms (Views: 10.6ms | ActiveRecord: 40.0ms | Allocations: 25964)
+
+
+Started GET "/admin/categories" for ::1 at 2023-04-29 00:44:49 +0900
+Processing by Admin::CategoriesController#index as HTML
+  Rendering layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb
+  Rendering /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_search.html.erb (Duration: 0.6ms | Allocations: 323)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_index_header.html.erb (Duration: 17.7ms | Allocations: 2425)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_collection_header_actions.html.erb (Duration: 0.1ms | Allocations: 33)
+  [1m[36mCategory Load (13.9ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` LIMIT 20 OFFSET 0[0m
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/number/_index.html.erb (Duration: 1.7ms | Allocations: 184)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/string/_index.html.erb (Duration: 0.8ms | Allocations: 168)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/date_time/_index.html.erb (Duration: 1.1ms | Allocations: 260)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_collection_item_actions.html.erb (Duration: 1.7ms | Allocations: 545)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_collection.html.erb (Duration: 28.1ms | Allocations: 5229)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_pagination.html.erb (Duration: 0.5ms | Allocations: 276)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (Duration: 47.1ms | Allocations: 8231)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 2.7ms | Allocations: 1794)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_navigation.html.erb (Duration: 1.3ms | Allocations: 1120)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_javascript.html.erb (Duration: 2.2ms | Allocations: 1873)
+  Rendered layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb (Duration: 54.7ms | Allocations: 13812)
+Completed 200 OK in 96ms (Views: 28.5ms | ActiveRecord: 42.3ms | Allocations: 16005)
+
+
+Started GET "/admin/questions" for ::1 at 2023-04-29 00:44:50 +0900
+Processing by Admin::QuestionsController#index as HTML
+  Rendering layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb
+  Rendering /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_search.html.erb (Duration: 1.0ms | Allocations: 322)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_index_header.html.erb (Duration: 3.2ms | Allocations: 1408)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_collection_header_actions.html.erb (Duration: 0.1ms | Allocations: 31)
+  [1m[36mQuestion Load (13.6ms)[0m  [1m[34mSELECT `questions`.* FROM `questions` LIMIT 20 OFFSET 0[0m
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_collection.html.erb (Duration: 33.2ms | Allocations: 2800)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_pagination.html.erb (Duration: 0.7ms | Allocations: 275)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (Duration: 37.9ms | Allocations: 4783)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 2.9ms | Allocations: 1793)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_navigation.html.erb (Duration: 1.3ms | Allocations: 1110)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_javascript.html.erb (Duration: 2.1ms | Allocations: 1840)
+  Rendered layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb (Duration: 45.3ms | Allocations: 10332)
+Completed 200 OK in 49ms (Views: 32.5ms | ActiveRecord: 13.6ms | Allocations: 11842)
+
+
+Started GET "/admin/questions/new" for ::1 at 2023-04-29 00:44:52 +0900
+Processing by Admin::QuestionsController#new as HTML
+  Rendering layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb
+  Rendering /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/boolean/_form.html.erb (Duration: 0.6ms | Allocations: 283)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/boolean/_form.html.erb (Duration: 0.4ms | Allocations: 282)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/boolean/_form.html.erb (Duration: 0.3ms | Allocations: 282)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/number/_form.html.erb (Duration: 0.3ms | Allocations: 243)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/number/_form.html.erb (Duration: 0.3ms | Allocations: 243)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/text/_form.html.erb (Duration: 0.3ms | Allocations: 226)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/string/_form.html.erb (Duration: 0.3ms | Allocations: 232)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_form.html.erb (Duration: 5.4ms | Allocations: 2938)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (Duration: 6.6ms | Allocations: 3273)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 3.3ms | Allocations: 1801)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_navigation.html.erb (Duration: 1.7ms | Allocations: 1571)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_javascript.html.erb (Duration: 2.5ms | Allocations: 1840)
+  Rendered layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb (Duration: 15.3ms | Allocations: 9126)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms | Allocations: 9514)
+
+
+Started GET "/admin/questions/new" for ::1 at 2023-04-29 00:45:56 +0900
+Processing by Admin::QuestionsController#new as HTML
+  Rendering layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb
+  Rendering /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/string/_form.html.erb (Duration: 0.2ms | Allocations: 265)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/boolean/_form.html.erb (Duration: 0.1ms | Allocations: 282)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/boolean/_form.html.erb (Duration: 0.1ms | Allocations: 282)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/boolean/_form.html.erb (Duration: 0.1ms | Allocations: 282)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/number/_form.html.erb (Duration: 0.1ms | Allocations: 244)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/number/_form.html.erb (Duration: 0.1ms | Allocations: 244)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/text/_form.html.erb (Duration: 0.1ms | Allocations: 227)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/string/_form.html.erb (Duration: 0.1ms | Allocations: 233)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_form.html.erb (Duration: 2.4ms | Allocations: 3314)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (Duration: 2.9ms | Allocations: 3653)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 2.0ms | Allocations: 1802)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_navigation.html.erb (Duration: 1.9ms | Allocations: 2395)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_javascript.html.erb (Duration: 1.4ms | Allocations: 1873)
+  Rendered layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb (Duration: 8.7ms | Allocations: 10366)
+Completed 200 OK in 69ms (Views: 9.5ms | ActiveRecord: 40.7ms | Allocations: 14668)
+
+
+Started GET "/admin/questions/new" for ::1 at 2023-04-29 00:46:48 +0900
+Processing by Admin::QuestionsController#new as HTML
+  Rendering layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb
+  Rendering /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/number/_form.html.erb (Duration: 0.2ms | Allocations: 245)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/string/_form.html.erb (Duration: 0.1ms | Allocations: 233)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/number/_form.html.erb (Duration: 0.2ms | Allocations: 244)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/text/_form.html.erb (Duration: 0.1ms | Allocations: 227)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/string/_form.html.erb (Duration: 0.2ms | Allocations: 233)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/boolean/_form.html.erb (Duration: 0.2ms | Allocations: 282)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/boolean/_form.html.erb (Duration: 0.1ms | Allocations: 282)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/boolean/_form.html.erb (Duration: 0.2ms | Allocations: 282)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_form.html.erb (Duration: 2.5ms | Allocations: 3291)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (Duration: 3.0ms | Allocations: 3630)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 2.3ms | Allocations: 1801)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_navigation.html.erb (Duration: 10.1ms | Allocations: 2407)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_javascript.html.erb (Duration: 1.6ms | Allocations: 1887)
+  Rendered layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb (Duration: 17.6ms | Allocations: 10368)
+Completed 200 OK in 83ms (Views: 18.6ms | ActiveRecord: 45.8ms | Allocations: 14629)
+
+
+Started GET "/admin/questions/new" for ::1 at 2023-04-29 00:47:07 +0900
+Processing by Admin::QuestionsController#new as HTML
+  Rendering layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb
+  Rendering /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/number/_form.html.erb (Duration: 0.3ms | Allocations: 245)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/string/_form.html.erb (Duration: 0.2ms | Allocations: 233)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/text/_form.html.erb (Duration: 0.2ms | Allocations: 227)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/string/_form.html.erb (Duration: 0.2ms | Allocations: 233)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/number/_form.html.erb (Duration: 0.2ms | Allocations: 244)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/boolean/_form.html.erb (Duration: 0.3ms | Allocations: 282)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/boolean/_form.html.erb (Duration: 0.3ms | Allocations: 282)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/boolean/_form.html.erb (Duration: 0.2ms | Allocations: 282)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_form.html.erb (Duration: 3.4ms | Allocations: 3281)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (Duration: 3.9ms | Allocations: 3620)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 2.5ms | Allocations: 1810)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_navigation.html.erb (Duration: 2.6ms | Allocations: 2419)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_javascript.html.erb (Duration: 1.7ms | Allocations: 1840)
+  Rendered layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb (Duration: 11.4ms | Allocations: 10332)
+Completed 200 OK in 77ms (Views: 12.5ms | ActiveRecord: 43.6ms | Allocations: 14609)
+
+
+Started POST "/admin/questions" for ::1 at 2023-04-29 00:49:32 +0900
+Processing by Admin::QuestionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "question"=>{"category_id"=>"1", "title"=>"一般原則①", "question"=>"企業会計は、企業の①及び②に関して、③を提供するものでなければならない。", "answer"=>"①財政状態　②経営成績　③真実な報告", "order"=>"1", "answer1"=>"0", "answer2"=>"0", "answer3"=>"0"}, "commit"=>"Create Question"}
+  [1m[36mTRANSACTION (13.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (13.5ms)[0m  [1m[32mINSERT INTO `questions` (`category_id`, `question`, `answer1`, `answer2`, `answer3`, `title`, `order`, `created_at`, `updated_at`, `answer`) VALUES (1, '企業会計は、企業の①及び②に関して、③を提供するものでなければならない。', FALSE, FALSE, FALSE, '一般原則①', 1, '2023-04-28 15:49:32.758989', '2023-04-28 15:49:32.758989', '①財政状態　②経営成績　③真実な報告')[0m
+  [1m[36mTRANSACTION (15.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/questions/1
+Completed 302 Found in 70ms (ActiveRecord: 42.2ms | Allocations: 3339)
+
+
+Started GET "/admin/questions/1" for ::1 at 2023-04-29 00:49:32 +0900
+Processing by Admin::QuestionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (15.8ms)[0m  [1m[34mSELECT `questions`.* FROM `questions` WHERE `questions`.`id` = 1 LIMIT 1[0m
+  Rendering layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb
+  Rendering /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/show.html.erb within layouts/administrate/application
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/number/_show.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/string/_show.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/boolean/_show.html.erb (Duration: 2.0ms | Allocations: 177)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/boolean/_show.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/boolean/_show.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/number/_show.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/number/_show.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/text/_show.html.erb (Duration: 0.8ms | Allocations: 168)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/string/_show.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/date_time/_show.html.erb (Duration: 0.6ms | Allocations: 78)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/date_time/_show.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/show.html.erb within layouts/administrate/application (Duration: 12.5ms | Allocations: 4084)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 11.4ms | Allocations: 1794)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_navigation.html.erb (Duration: 1.4ms | Allocations: 1147)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.1ms | Allocations: 29)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_javascript.html.erb (Duration: 2.6ms | Allocations: 1844)
+  Rendered layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb (Duration: 29.3ms | Allocations: 9695)
+Completed 200 OK in 66ms (Views: 32.7ms | ActiveRecord: 15.8ms | Allocations: 11079)
+
+
+Started GET "/" for ::1 at 2023-04-29 00:49:45 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.4ms | Allocations: 359)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 1109)
+
+
+Started GET "/" for ::1 at 2023-04-29 00:51:36 +0900
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 106)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 18604)
+Completed 200 OK in 14ms (Views: 13.8ms | ActiveRecord: 0.0ms | Allocations: 19594)
+
+
+Started GET "/admin/questions" for ::1 at 2023-04-29 00:53:41 +0900
+Processing by Admin::QuestionsController#index as HTML
+  Rendering layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb
+  Rendering /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_search.html.erb (Duration: 0.9ms | Allocations: 1108)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_index_header.html.erb (Duration: 255.8ms | Allocations: 5020)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_collection_header_actions.html.erb (Duration: 0.8ms | Allocations: 169)
+  [1m[36mQuestion Load (37.1ms)[0m  [1m[34mSELECT `questions`.* FROM `questions` LIMIT 20 OFFSET 0[0m
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/number/_index.html.erb (Duration: 0.9ms | Allocations: 180)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/boolean/_index.html.erb (Duration: 0.7ms | Allocations: 168)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/boolean/_index.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/boolean/_index.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_collection_item_actions.html.erb (Duration: 2.0ms | Allocations: 531)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_collection.html.erb (Duration: 56.7ms | Allocations: 6006)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_pagination.html.erb (Duration: 3.3ms | Allocations: 970)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (Duration: 321.3ms | Allocations: 13418)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 5.9ms | Allocations: 1996)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_icons.html.erb (Duration: 0.8ms | Allocations: 127)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_navigation.html.erb (Duration: 4.5ms | Allocations: 1773)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.6ms | Allocations: 264)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_javascript.html.erb (Duration: 3.6ms | Allocations: 2136)
+  Rendered layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb (Duration: 346.4ms | Allocations: 22154)
+Completed 200 OK in 380ms (Views: 63.8ms | ActiveRecord: 299.6ms | Allocations: 25807)
+
+
+Started GET "/admin/questions/1" for ::1 at 2023-04-29 00:53:50 +0900
+Processing by Admin::QuestionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (14.6ms)[0m  [1m[34mSELECT `questions`.* FROM `questions` WHERE `questions`.`id` = 1 LIMIT 1[0m
+  Rendering layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb
+  Rendering /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/show.html.erb within layouts/administrate/application
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/number/_show.html.erb (Duration: 1.1ms | Allocations: 183)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/string/_show.html.erb (Duration: 0.7ms | Allocations: 169)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/boolean/_show.html.erb (Duration: 0.5ms | Allocations: 171)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/boolean/_show.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/boolean/_show.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/number/_show.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/number/_show.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/text/_show.html.erb (Duration: 0.5ms | Allocations: 169)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/string/_show.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/date_time/_show.html.erb (Duration: 0.9ms | Allocations: 264)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/fields/date_time/_show.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/show.html.erb within layouts/administrate/application (Duration: 14.3ms | Allocations: 5183)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 3.5ms | Allocations: 1793)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_navigation.html.erb (Duration: 1.5ms | Allocations: 1236)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/administrate/application/_javascript.html.erb (Duration: 2.5ms | Allocations: 1842)
+  Rendered layout /Users/tsujidaiki/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/administrate-0.18.0/app/views/layouts/administrate/application.html.erb (Duration: 23.0ms | Allocations: 10840)
+Completed 200 OK in 66ms (Views: 29.1ms | ActiveRecord: 14.6ms | Allocations: 12368)
+
+
+Started GET "/" for ::1 at 2023-04-29 00:53:54 +0900
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 23.3ms | Allocations: 18326)
+Completed 200 OK in 25ms (Views: 24.8ms | ActiveRecord: 0.0ms | Allocations: 18959)
+
+
+Started GET "/" for ::1 at 2023-04-29 00:57:17 +0900
+Processing by CategoriesController#index as HTML
+Filter chain halted as :basic_auth rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms | Allocations: 136)
+
+
+Started GET "/" for ::1 at 2023-04-29 00:57:26 +0900
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 18237)
+Completed 200 OK in 33ms (Views: 31.7ms | ActiveRecord: 0.0ms | Allocations: 18885)
+
+
+Started GET "/" for ::1 at 2023-04-29 01:05:05 +0900
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 104)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 3136)
+Completed 200 OK in 18ms (Views: 16.1ms | Allocations: 4098)
+
+
+Started GET "/" for ::1 at 2023-04-29 01:06:11 +0900
+Processing by CategoriesController#index as HTML
+Filter chain halted as :basic_auth rendered or redirected
+Completed 401 Unauthorized in 1ms (Allocations: 74)
+
+
+Started GET "/" for ::1 at 2023-04-29 01:06:17 +0900
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 2812)
+Completed 200 OK in 9ms (Views: 7.6ms | Allocations: 3076)
+
+
+Started GET "/" for ::1 at 2023-04-29 01:06:40 +0900
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 104)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3128)
+Completed 200 OK in 9ms (Views: 7.8ms | Allocations: 4090)
+
+
+Started GET "/" for ::1 at 2023-04-29 01:07:01 +0900
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 104)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3128)
+Completed 200 OK in 13ms (Views: 9.6ms | Allocations: 4090)
+
+
+Started GET "/" for ::1 at 2023-04-29 01:07:08 +0900
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 104)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 3130)
+Completed 200 OK in 14ms (Views: 12.3ms | Allocations: 4092)
+
+
+Started GET "/" for ::1 at 2023-04-29 01:07:10 +0900
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 104)
+  Rendered layout layouts/application.html.erb (Duration: 33.7ms | Allocations: 3147)
+Completed 200 OK in 38ms (Views: 36.5ms | Allocations: 4110)
+
+
